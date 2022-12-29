@@ -444,6 +444,10 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti
 
+# TimeKeep
+PRODUCT_PACKAGES += \
+    TimeKeep
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service
