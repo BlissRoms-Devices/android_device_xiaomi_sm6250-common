@@ -353,6 +353,9 @@ PRODUCT_PACKAGES += \
    TetheringConfigOverlay \
    WifiOverlay
 
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-bliss   
+
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Partitions
