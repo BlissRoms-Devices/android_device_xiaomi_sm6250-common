@@ -95,7 +95,10 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Camera
 PRODUCT_PACKAGES += \
-    libgui_vendor
+    libcamera2ndk_vendor \
+    libdng_sdk.vendor \
+    libgui_vendor \
+    libstdc++.vendor
 
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
