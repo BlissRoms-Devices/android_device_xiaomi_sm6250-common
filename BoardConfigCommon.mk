@@ -59,6 +59,9 @@ TARGET_SCREEN_DENSITY := 440
 TARGET_USES_DRM_PP := true
 TARGET_USES_HWC2 := true
 
+# Extended Filesystem Support
+TARGET_EXFAT_DRIVER := sdfat
+
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
@@ -67,8 +70,17 @@ AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
 BOARD_HAS_QCA_FM_SOC := cherokee
 BOARD_HAVE_QCOM_FM := true
 
-# Extended Filesystem Support
-TARGET_EXFAT_DRIVER := sdfat
+# GNSS
+BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
+LOC_HIDL_VERSION := 4.0
+
+# HIDL
+DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
+DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
+
+# Init
+TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_xiaomi_sm6250
+TARGET_RECOVERY_DEVICE_MODULES := libinit_xiaomi_sm6250
 
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
@@ -104,13 +116,6 @@ BOARD_KERNEL_CMDLINE += msm_rtb.filter=0x237
 BOARD_KERNEL_CMDLINE += service_locator.enable=1
 BOARD_KERNEL_CMDLINE += swiotlb=1
 BOARD_KERNEL_CMDLINE += kpti=off
-# HIDL
-DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
-DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
-
-# Init
-TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_xiaomi_sm6250
-TARGET_RECOVERY_DEVICE_MODULES := libinit_xiaomi_sm6250
 
 # Media
 TARGET_USES_ION := true
