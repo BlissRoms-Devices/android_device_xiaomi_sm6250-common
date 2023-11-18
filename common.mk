@@ -305,7 +305,6 @@ PRODUCT_PACKAGES += \
 # Overlays
 PRODUCT_PACKAGES += \
    ApertureOverlay \
-   ApertureDevOverlay \
    CarrierConfigOverlay \
    DialerOverlay \
    MiatollFrameworks \
@@ -314,7 +313,6 @@ PRODUCT_PACKAGES += \
    SettingsLibOverlay \
    SettingsOverlay \
    TelephonyOverlay \
-   TetheringConfigOverlay \
    WifiOverlay 
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
